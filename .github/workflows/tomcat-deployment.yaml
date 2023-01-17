@@ -36,7 +36,7 @@ jobs:
         run: ls -l target/*.war
 
       - name: Upload Action Artifacts
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v3
         with:
           name: apisrvice$-{{githun.run_number}}.war
           path: target/apisrvice$-{{githun.run_number}}.war
@@ -51,7 +51,7 @@ jobs:
       steps:
 
         - name: Upload Action Artifacts
-          uses: actions/download-artifact@v3.1.2
+          uses: actions/download-artifact@v3
           with:
             name: apisrvice$-{{githun.run_number}}.war
             path: target/apisrvice$-{{githun.run_number}}.war
