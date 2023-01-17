@@ -45,7 +45,6 @@ jobs:
       #   run: mv target/apiservice-0.0.1-SNAPSHOT.war target/apiservice-${{github.run_number}}.war
 
 deployment-springboot-app:
-    deploye-springboot-app:
     name: Deploye Springboot Application
     runs-on: ubuntu-latest
     needs: deploye-springboot-app
