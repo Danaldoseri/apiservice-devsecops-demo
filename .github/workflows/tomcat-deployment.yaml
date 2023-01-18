@@ -69,10 +69,10 @@ jobs:
             ssh_options: -o StrictHostKeyChecking=no
             scp_options: -v
 
-verify-springboot-app:
-    name: Verify Springboot Application
-    runs-on: ubuntu-latest
-    needs: build-springboot-app
-    steps:
-      - name: Verigy the app
-        run: curl - I http://${{secrets.HOST}}:8080/apisrvice-${{github.run_number}}/actuator/health
+  verify-springboot-app:
+      name: Verify App
+      runs-on: ubuntu-latest
+      needs: build-springboot-app
+      steps:
+        - name: Verigy the app
+          run: curl - I http://${{secrets.HOST}}:8080/apisrvice-${{github.run_number}}/actuator/health
